@@ -226,7 +226,7 @@ nav li:last-child {
 }
 
 .presentacion-container {
-    padding: 20px;
+    padding: 20px 0px;
     max-width: 100%;
     text-align: center;
     color: white;
@@ -239,8 +239,9 @@ nav li:last-child {
 .presentacion-container>h1 {
     /*arriba derecha abajo izquierda */
     margin: 0 auto;
-    padding: 150px;
+    padding-top: 150px;
     display: block;
+    width: 100%;
     max-width: 100%;
     font-size: 8em;
     font-family: 'vollkorn-bold', Helvetica, sans-serif;
@@ -416,7 +417,7 @@ h2 {
 }
 
 .img {
-    background-image: url(/assets/img/about-us-banner-hombre.png);
+    background-image: url(/assets/img/about-us-banner-hombre.webp);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -539,6 +540,45 @@ aside>hr {
 
 .linea-item:hover .overlay {
     opacity: 1;
+}
+
+#pdf-lineas {
+    margin-top: 20px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 73.71%;
+    /* Esto mantiene una relación de aspecto de 3:2 (750px de alto por 1125px de ancho) */
+    position: relative;
+    max-height: 750px;
+}
+
+#pdf-lineas object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Quitar bordes del iframe */
+}
+
+.alternative-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.5ms;
+}
+
+.alternative-text p {
+    background-color: #3e5976;
+    padding: 10px;
+    color: #f7f7f7;
+    border: 3px #c0d2e6 solid;
+}
+
+.alternative-text p:hover {
+    color: #edcd20;
+    transition: color 1s;
 }
 
 
@@ -817,7 +857,7 @@ hr {
         height: 100%;
     }
     .presentacion-container>h1 {
-        padding-top: 200px;
+        padding-top: 100px;
         font-size: 6em;
     }
     .presentacion-container>p {
@@ -1212,7 +1252,7 @@ hr {
     }
     .presentacion-container {}
     .presentacion-container>h1 {
-        padding-top: 140px;
+        padding-top: 70px;
         font-size: 4.5em;
     }
     .presentacion-container>p {
@@ -1475,7 +1515,7 @@ hr {
     }
     .presentacion-container {}
     .presentacion-container>h1 {
-        padding-top: 50px;
+        padding-top: 60px;
         font-size: 4.5em;
     }
     .presentacion-container>p {
@@ -1712,7 +1752,7 @@ hr {
     }
     .presentacion-container {}
     .presentacion-container>h1 {
-        padding-top: 100px;
+        padding-top: 50px;
         font-size: 3.5em;
     }
     .presentacion-container>p {
@@ -2256,12 +2296,12 @@ hr {
         padding-top: 60px;
         font-size: 2.5em;
         text-align: center;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
     .presentacion-container>p {
         font-size: 1.3em;
         line-height: 1.3em;
-        padding: 10px 0px 40px;
+        padding: 40px 0px 20px;
         filter: drop-shadow(0px 0px 8px #000000);
     }
     .arrow-down {
@@ -2517,6 +2557,16 @@ hr {
     }
     .text-linea {
         width: 100%;
+    }
+}
+
+@media (max-width: 475px) {
+    .presentacion-container {
+        height: 600px;
+    }
+    .presentacion-container>h1 {
+        padding: 0px;
+        padding-top: 55px;
     }
 }
 
